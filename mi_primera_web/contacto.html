@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>SergioSport</title>
+</head>
+<body>
+    <header>
+        <nav>     
+            <div>
+                <!--Cambiar logo por algo deportivo-->
+                <img src="logo-musica3.png" alt="Logo página">
+            </div> 
+            <div>
+                <!--Logo para ir al perfil del usuario-->
+            </div>
+        </nav>
+        <h1 class="center">SergioSport</h1>
+        <p class="center">Si quieres empezar bien contacta conmigo</p>
+        <nav class="flex-container" class="center">
+            <a id="nav" href="index.html"> <b>Inicio </b></a>
+            <a id="nav" href="contacto.html"> <b>Contacto</b></a>
+            <a id="nav" href="sugerencias_populares.html"><b>Sugerencias_Populares</b></a>
+        </nav>
+    </header>
+        <main>
+            <div class="info-contacto"> 
+                <div class="cont-usuario">
+                    <h2>Contacto</h2>
+                    <form action="" method="get">
+                        <label for="nombre">Nombre completo:</label><br>
+                        <input type="text" id="nombre" name="nombre"><br>
+                        <label for="correo">Correo electrónico:</label><br>
+                        <input type="email" id="correo" name="correo"><br>
+                        <label for="telefono">Número de teléfono:</label><br>
+                        <input type="number" id="telefono" name="telefono"><br>
+                        <label for="asunto">Asunto:</label><br>
+                        <input type="text" id="asunto" name="asunto"><br>
+                        <label for="mensaje">Mensaje:</label><br>
+                        <input type="textarea" id="mensaje" name="mensaje"><br>
+                    </form>
+                </div>
+                <div class="cont-pag">
+                    <h2>Para contactar</h2>
+                    <p>Correo: Sergio.v.m2002@alumnes.ilerna.com</p>
+                    <p>N.Télefono: <br> 68490172839</p>
+                    <p>Centro deportivo Lostark en calle Rafael Vinagrillo 24</p>
+                </div>
+            </div>
+            <div class="info-centro">
+                <div class="horario">
+                    <h2>Horario de atención telefónica o presencial</h2>
+                    <table border="1">
+                        <caption>Horarios de atención de SergioSport para consultas o entrenamiento</caption>
+                        <thead>
+                            <tr>
+                            <th scope="col">Día</th>
+                            <th scope="col">Horario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">Lunes</th>
+                            <td>08:00 – 22:00</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Martes</th>
+                            <td>08:00 – 22:00</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Miércoles</th>
+                            <td>08:00 – 22:00</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Jueves</th>
+                            <td>08:00 – 22:00</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Viernes</th>
+                            <td>08:00 – 22:00</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Sábado</th>
+                            <td>10:00 – 20:00</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Domingo</th>
+                            <td>10:00 – 20:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mapa">
+                    <h2>Nos puedes visitar presencialmente aqui:</h2>
+                    <iframe
+                        src="https://www.google.com/maps?q=Sabadell,+España&output=embed"
+                        width="300"
+                        height="200"
+                        style="border:0; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </main>
+    <footer>
+            <small>&copy; 2025 · Ilerna</small>
+    </footer>
+</body>
+</html>

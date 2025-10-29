@@ -1,4 +1,3 @@
-/* 🌐 Estilo general */
 body {
   background-color: #F2F2F2; 
   margin-left: 40px;
@@ -7,7 +6,6 @@ body {
   color: #222222; 
 }
 
-/* 🔹 Encabezado */
 header {
   border: 2px solid #5A5A5A; 
   background-color: #ffffff; 
@@ -16,24 +14,7 @@ header {
   margin: 20px auto;
   max-width: 900px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* 🔹 Navegación */
-#nav {
-  color: #0057B7; 
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-#nav:hover {
-  color: #00A676; 
+  text-align: center;
 }
 
 .flex-container {
@@ -42,15 +23,13 @@ header {
   justify-content: center;
 }
 
-/* 🔹 Logos en header */
 header img {
-  width: 100px; /* tamaño del logo */
+  width: 100px; 
   height: auto;
   display: block;
   border-radius: 0;
 }
 
-/* 🔹 Artículo principal */
 .article {
   background-color: #ffffff; 
   margin: 20px auto;
@@ -60,19 +39,15 @@ header img {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* 🔹 Sección Actividades con Flexbox (2 columnas) */
 .actividades {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* separa columnas */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
   margin: 20px auto;
   max-width: 900px;
-  gap: 20px;
 }
 
 .actividades > div {
-  box-sizing: border-box;
-  flex: 0 0 calc(50% - 10px); /* 2 columnas */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,7 +56,6 @@ header img {
   font-size: 20px;
   border-radius: 10px;
   border: 2px solid #5A5A5A; 
-  margin-bottom: 20px; /* espacio entre filas */
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s, border-color 0.3s;
 }
@@ -92,37 +66,32 @@ header img {
 }
 
 .actividades img {
-  width: 100%;          /* ocupa todo el ancho del div */
-  max-width: 180px;     /* tamaño máximo */
+  width: 100%;
+  max-width: 180px;
   height: auto;
   margin-bottom: 15px;
   border-radius: 12px;
 }
-
-/* 🔹 Secciones de visita con Flexbox */
 .visita1, .visita2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px;
   margin: 15px 0;
 }
 
 .visita1 img,
 .visita2 img {
-  width: 180px;
+  width: 100%;
+  max-width: 180px;
   height: auto;
   border-radius: 10px;
 }
 
-/* 🔹 Títulos */
 h2 {
   color: #0057B7; 
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
-/* 🔹 Footer con redes sociales y textos */
 footer {
   border: 2px solid #5A5A5A;
   background-color: #ffffff;
@@ -131,18 +100,18 @@ footer {
   margin: 20px auto;
   max-width: 900px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  display: flex;
-  justify-content: space-between; /* izquierda y derecha */
+  display: grid;
+  grid-template-columns: auto 1fr; 
   align-items: center;
+  gap: 20px;
   color: #222222;
 }
 
-.footer-left, .footer-right {
+.footer-left {
   display: flex;
   align-items: center;
 }
 
-/* Iconos sociales */
 .footer-left a {
   margin-right: 15px;
 }
@@ -152,29 +121,27 @@ footer {
   height: 30px;
 }
 
-/* Textos en columna a la derecha */
 .footer-right {
+  display: flex;
   flex-direction: column;
-  align-items: flex-end; /* alinea textos a la derecha */
+  align-items: flex-end;
 }
 
 .footer-right p {
   margin: 2px 0;
 }
 
-/* 🔹 Info de contacto / centro */
 .info-contacto,
 .info-centro {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  justify-content: space-between;
   margin: 20px auto;
   max-width: 900px;
 }
 
 .info-contacto > div,
 .info-centro > div {
-  flex: 1;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 15px;
@@ -182,7 +149,6 @@ footer {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* 🔹 Tablas */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -199,18 +165,16 @@ table th {
   background-color: #F2F2F2;
 }
 
-/* 🔹 Adaptación responsive */
 @media (max-width: 700px) {
-  .actividades > div {
-    flex: 0 1 100%; /* 1 columna en móvil */
-    max-width: 100%;
+  .actividades {
+    grid-template-columns: 1fr; 
   }
 
-  .actividades img {
-    max-width: 150px;
+  .visita1, .visita2 {
+    grid-template-columns: 1fr;
   }
 
   .footer-right {
-    align-items: flex-start; /* textos alineados a la izquierda en móvil */
+    align-items: flex-start;
   }
 }

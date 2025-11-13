@@ -39,21 +39,11 @@ header {
   justify-content: center;
 }
 
-img {
-  width: 100px;
+header img {
+  width: 100px; 
+  height: auto;
   display: block;
-}
-
-header > h1 {
-  color: #0057B7; 
-  text-align: center;
-}
-
-header > p {
-  color: #222222;
-  font-size: larger;
-  font-style: italic;
-  text-align: center;
+  border-radius: 0;
 }
 
 .article {
@@ -65,26 +55,63 @@ header > p {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.instrumentos {
+.actividades {
   display: flex;
-  gap: 30px;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between; 
   margin: 20px auto;
+  max-width: 900px;
+  gap: 20px;
 }
 
-.instrumentos > div {
-  background-color: #F2F2F2; 
-  margin: 10px;
+.actividades > div {
+  box-sizing: border-box;
+  flex: 0 0 calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
   padding: 20px;
-  font-size: 30px;
+  font-size: 20px;
   border-radius: 10px;
   border: 2px solid #5A5A5A; 
+  margin-bottom: 20px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s, border-color 0.3s;
 }
 
-.instrumentos > div:hover {
+.actividades > div:hover {
   transform: translateY(-5px);
   border-color: #00A676; 
+}
+
+.actividades img {
+  width: 100%;          
+  max-width: 180px;     
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 12px;
+}
+
+.visita1, .visita2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.visita1 img,
+.visita2 img {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #0057B7; 
+  display: flex;
+  justify-content: center;
 }
 
 footer {
@@ -96,8 +123,32 @@ footer {
   max-width: 900px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   display: flex;
-  justify-content: center;
+  justify-content: space-between; 
+  align-items: center;
   color: #222222;
+}
+
+.footer-left, .footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-left a {
+  margin-right: 15px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-right {
+  flex-direction: column;
+  align-items: flex-end; 
+}
+
+.footer-right p {
+  margin: 2px 0;
 }
 
 .info-contacto,
@@ -135,3 +186,17 @@ table th {
   background-color: #F2F2F2;
 }
 
+@media (max-width: 700px) {
+  .actividades > div {
+    flex: 0 1 100%; 
+    max-width: 100%;
+  }
+
+  .actividades img {
+    max-width: 150px;
+  }
+
+  .footer-right {
+    align-items: flex-start; 
+  }
+}

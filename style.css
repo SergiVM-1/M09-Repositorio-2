@@ -1,8 +1,25 @@
-body {
+/*EJERCICIO 6.2
+100% 100% ocupa todo el fondo por la imagen seleccionada
+cover hacer lo mismo pero corta parte de la imagen
+finalmente contain repite la imagen la cantidad de veces necesaria para
+que ocupe la longitud de la página
+
+No me gusta ninguna opción ya que se ve borroso y no tengo ninguna imagen que
+pueda quedar bien de fondo, si se bscará una buena, creo que quedaría mejor
+100% 100% ya que se ve toda la img en caso de que sea un buen detalle*/
+
+/*EJERCICIO 6.3
+He utilizado las media queries ya que solo había que cambiar el background del body
+y de esta manera podía aprovechar el código de las media queries*/
+body{
+  background-image: url(images/gym-res.jpeg);
+  background-size: 100% 100%;
+  /*background-size: cover;
+  background-size: contain;*/
   background-color: #F2F2F2;
   margin-left: 40px;
   margin-right: 40px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
   color: #222222;
 }
 
@@ -76,12 +93,12 @@ header {
   margin: 15px 0;
 }
 
-.visita1 img,
+/*.visita1 img,
 .visita2 img {
   width: 180px;
   height: auto;
   border-radius: 10px;
-}
+}*/
 
 h2 {
   color: #0057B7;
@@ -119,13 +136,13 @@ h2 {
   border-color: #00A676;
 }
 
-.actividades img {
+/*.actividades img {
   width: 100%;
   max-width: 180px;
   height: auto;
   margin-bottom: 15px;
   border-radius: 12px;
-}
+}*/
 
 footer {
   border: 2px solid #5A5A5A;
@@ -201,15 +218,27 @@ table th {
 }
 
 
-/*Cuando la pantalla es menor a 700px*/
+/*EJERCICIO 6.3
+Cuando la pantalla es menor a 700px*/
 @media (max-width: 700px) {
+  body {
+    margin-left: 15px;
+    margin-right: 15px;
+    background-image: url(images/gimnasio-peque.jpg);
+    background-size: 100% 100%;
+  /*background-size: cover;
+  background-size: contain;*/
+
+  }
+
   .actividades > div {
-    flex: 0 1 100%;
+    flex: 0   1 100%;
     max-width: 100%;
   }
 
   .actividades img {
-    max-width: 150px;
+    max-width: 100%;
+    height: auto;
   }
 
   .footer-right {
@@ -245,11 +274,17 @@ table th {
   }
 }
 
-/*Menor a 480px*/
+/*EJERCICIO 6.3 
+Menor a 480px*/
 @media (max-width: 480px) {
   body {
     margin-left: 15px;
     margin-right: 15px;
+    background-image: url(images/cinta_peque.png);
+    background-size: 100% 100%;
+  /*background-size: cover;
+  background-size: contain;*/
+
   }
 
   .navbar .logo img {
@@ -265,6 +300,8 @@ table th {
     font-size: 14px;
     text-align: center;
   }
+
+  
 }
 
 @keyframes slideDown {
@@ -326,3 +363,19 @@ form button:hover {
   justify-content: center;
   align-items: flex-start; 
 }
+
+/*EJERCICIO 6.1*/
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/*EJERCICIO 6.4
+1.Si, en las diferentes anchuras la img cambia correctamente.
+2.No se deforman, mantienen su forma disminuyendo o aumentando su tamaño.
+3.No sobresale ninguna del recuadro ya que mantienen el 100% del total que pueden ocupar.
+4.Si, bueno, mantienen la calidad que ya tenian, excepto la de background que cambia a otra
+de menos calidad.
+*/

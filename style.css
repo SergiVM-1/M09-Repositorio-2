@@ -1,19 +1,19 @@
 body {
-  background-color: #F2F2F2; 
+  background-color: #F2F2F2;
   margin-left: 40px;
   margin-right: 40px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: #222222; 
+  color: #222222;
 }
 
 header {
-  border: 2px solid #5A5A5A; 
-  background-color: #ffffff; 
+  border: 2px solid #5A5A5A;
+  background-color: #ffffff;
   border-radius: 15px;
   padding: 20px;
   margin: 20px auto;
   max-width: 900px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .center {
@@ -21,79 +21,54 @@ header {
   flex-direction: column;
   align-items: center;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #5A5A5A;
+  border-radius: 15px;
+  padding: 10px 20px;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+}
 
-#nav {
-  color: #0057B7; 
+.navbar .logo img {
+  width: 100px;
+  height: auto;
+  display: block;
+}
+
+.navbar .menu a {
+  color: #0057B7;
   text-decoration: none;
   font-weight: bold;
+  margin-left: 20px;
   transition: color 0.3s;
 }
 
-#nav:hover {
-  color: #00A676; 
+.navbar .menu a:hover {
+  color: #00A676;
 }
 
-.flex-container {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
-
-header img {
-  width: 100px; 
-  height: auto;
-  display: block;
-  border-radius: 0;
+.navbar .icon {
+  display: none;
+  color: #0057B7;
+  font-size: 26px;
+  cursor: pointer;
 }
 
 .article {
-  background-color: #ffffff; 
+  background-color: #ffffff;
   margin: 20px auto;
   padding: 20px;
   border-radius: 15px;
   max-width: 900px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.actividades {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; 
-  margin: 20px auto;
-  max-width: 900px;
-  gap: 20px;
-}
-
-.actividades > div {
-  box-sizing: border-box;
-  flex: 0 0 calc(50% - 10px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 20px;
-  font-size: 20px;
-  border-radius: 10px;
-  border: 2px solid #5A5A5A; 
-  margin-bottom: 20px; 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s, border-color 0.3s;
-}
-
-.actividades > div:hover {
-  transform: translateY(-5px);
-  border-color: #00A676; 
-}
-
-.actividades img {
-  width: 100%;          
-  max-width: 180px;     
-  height: auto;
-  margin-bottom: 15px;
-  border-radius: 12px;
-}
-
-.visita1, .visita2 {
+.visita1,
+.visita2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -109,9 +84,47 @@ header img {
 }
 
 h2 {
-  color: #0057B7; 
+  color: #0057B7;
   display: flex;
   justify-content: center;
+}
+
+.actividades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px auto;
+  max-width: 900px;
+  gap: 20px;
+}
+
+.actividades > div {
+  box-sizing: border-box;
+  flex: 0 0 calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid #5A5A5A;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.actividades > div:hover {
+  transform: translateY(-5px);
+  border-color: #00A676;
+}
+
+.actividades img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 12px;
 }
 
 footer {
@@ -121,14 +134,15 @@ footer {
   padding: 20px;
   margin: 20px auto;
   max-width: 900px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   color: #222222;
 }
 
-.footer-left, .footer-right {
+.footer-left,
+.footer-right {
   display: flex;
   align-items: center;
 }
@@ -144,7 +158,7 @@ footer {
 
 .footer-right {
   flex-direction: column;
-  align-items: flex-end; 
+  align-items: flex-end;
 }
 
 .footer-right p {
@@ -167,7 +181,7 @@ footer {
   padding: 20px;
   border-radius: 15px;
   border: 2px solid #5A5A5A;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 table {
@@ -176,7 +190,7 @@ table {
   text-align: center;
 }
 
-table th, 
+table th,
 table td {
   border: 1px solid #5A5A5A;
   padding: 8px;
@@ -186,9 +200,11 @@ table th {
   background-color: #F2F2F2;
 }
 
+
+/*Cuando la pantalla es menor a 700px*/
 @media (max-width: 700px) {
   .actividades > div {
-    flex: 0 1 100%; 
+    flex: 0 1 100%;
     max-width: 100%;
   }
 
@@ -197,6 +213,116 @@ table th {
   }
 
   .footer-right {
-    align-items: flex-start; 
+    align-items: flex-start;
   }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #ccc;
+  }
+
+  .navbar .menu.active {
+    display: flex;
+    animation: slideDown 0.3s ease;
+  }
+
+  .navbar .menu a {
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    margin-left: 0;
+  }
+
+  .navbar .icon {
+    display: block;
+  }
+}
+
+/*Menor a 480px*/
+@media (max-width: 480px) {
+  body {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .navbar .logo img {
+    width: 80px;
+  }
+
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  p.center {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+form button {
+  margin-top: 10px;
+  background-color: #0057B7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #00A676;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 250px;
+}
+
+@media (max-width: 700px) {
+  .info-contacto, .info-centro {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.info-contacto {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start; 
 }

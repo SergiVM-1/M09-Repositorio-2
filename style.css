@@ -11,365 +11,399 @@ pueda quedar bien de fondo, si se bscará una buena, creo que quedaría mejor
 /*EJERCICIO 6.3
 He utilizado las media queries ya que solo había que cambiar el background del body
 y de esta manera podía aprovechar el código de las media queries*/
+
 body{
-  background-image: url(images/gym-res.jpeg);
-  background-size: 100% 100%;
-  /*background-size: cover;
-  background-size: contain;*/
-  background-color: #F2F2F2;
-  margin-left: 40px;
-  margin-right: 40px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
-  color: #222222;
+ /*background-image: url(images/gym-res.jpeg);
+  background-size: 100% 100%;
+  /*background-size: cover;
+  background-size: contain;*/
+ background-color: #F2F2F2;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+ color: #222222;
 }
 
 header {
-  border: 2px solid #5A5A5A;
-  background-color: #ffffff;
-  border-radius: 15px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 900px;
+ border: 2px solid #5A5A5A;
+ background-color: #ffffff;
+ border-radius: 15px;
+ padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+ margin-bottom: 10px;
 }
 
 .center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
 }
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-  border: 2px solid #5A5A5A;
-  border-radius: 15px;
-  padding: 10px 20px;
-  max-width: 900px;
-  margin: 0 auto 20px auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: #ffffff;
+ border: 2px solid #5A5A5A;
+ border-radius: 15px;
+ padding: 10px 20px;
+ max-width: 900px;
+ margin: 0 auto 20px auto;
 }
 
 .navbar .logo img {
-  width: 100px;
-  height: auto;
-  display: block;
+ width: 100px;
+ height: auto;
+ display: block;
 }
 
 .navbar .menu a {
-  color: #0057B7;
-  text-decoration: none;
-  font-weight: bold;
-  margin-left: 20px;
-  transition: color 0.3s;
+ color: #0057B7;
+ text-decoration: none;
+ font-weight: bold;
+ margin-left: 20px;
+ transition: color 0.3s;
 }
 
 .navbar .menu a:hover {
-  color: #00A676;
+ color: #00A676;
 }
 
 .navbar .icon {
-  display: none;
-  color: #0057B7;
-  font-size: 26px;
-  cursor: pointer;
+ display: none;
+ color: #0057B7;
+ font-size: 26px;
+ cursor: pointer;
+}
+.panel_visita{
+ width: 100%;
+ height: 80vh;
+ position: relative;
+ overflow: hidden;
 }
 
-.article {
-  background-color: #ffffff;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 15px;
-  max-width: 900px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+.panel_visita img {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ opacity: 0;
+ transition: opacity 1s ease-in-out;
+ animation: cambio 35s infinite;
+ border-radius: 20px;
 }
 
-.visita1,
-.visita2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin: 15px 0;
+.panel_visita img:nth-child(1) { animation-delay: 0s; }
+.panel_visita img:nth-child(2) { animation-delay: 5s; }
+.panel_visita img:nth-child(3) { animation-delay: 10s; }
+.panel_visita img:nth-child(4) { animation-delay: 15s; }
+.panel_visita img:nth-child(5) { animation-delay: 20s; }
+.panel_visita img:nth-child(6) { animation-delay: 25s; }
+.panel_visita img:nth-child(7) { animation-delay: 30s; }
+
+@keyframes cambio {
+ 0%  { opacity: 1; }
+ 16% { opacity: 1; }
+ 20% { opacity: 0; }
+ 100% { opacity: 0; }
 }
+
 
 /*.visita1 img,
 .visita2 img {
-  width: 180px;
-  height: auto;
-  border-radius: 10px;
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
 }*/
 
 h2 {
-  color: #0057B7;
-  display: flex;
-  justify-content: center;
+ color: #0057B7;
+ display: flex;
+ justify-content: center;
 }
 
 .actividades {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px auto;
-  max-width: 900px;
-  gap: 20px;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ margin: 20px auto;
+ max-width: 900px;
+ gap: 20px;
 }
 
+/* MODIFICACIÓN: Aumentar el tamaño de la tarjeta a 45% */
 .actividades > div {
-  box-sizing: border-box;
-  flex: 0 0 calc(50% - 10px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 20px;
-  font-size: 20px;
-  border-radius: 10px;
-  border: 2px solid #5A5A5A;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s, border-color 0.3s;
+ box-sizing: border-box;
+ flex: 0 0 100%; /* Ocupa todo el ancho */
+ max-width: 100%; 
+ background-color: #ffffff;
+ padding: 20px;
+ font-size: 20px;
+ border-radius: 10px;
+ border: 2px solid #5A5A5A;
+ margin-bottom: 20px;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+ transition: transform 0.3s, border-color 0.3s;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ gap: 25px; /* Espacio aumentado */
 }
 
 .actividades > div:hover {
-  transform: translateY(-5px);
-  border-color: #00A676;
+ transform: translateY(-5px);
+ border-color: #00A676;
 }
 
+/* MODIFICACIÓN: Aumentar el tamaño de la imagen */
+.actividad .Izq img {
+ width: 250px; /* Tamaño de imagen muy aumentado */
+ height: auto;
+ border-radius: 8px;
+}
+
+
+.actividad .Der {
+ display: flex;
+ flex-direction: column;
+ gap: 5px;
+}
+
+.actividad .Der p {
+ margin: 0;
+}
+
+
 /*.actividades img {
-  width: 100%;
-  max-width: 180px;
-  height: auto;
-  margin-bottom: 15px;
-  border-radius: 12px;
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 12px;
 }*/
 
 footer {
-  border: 2px solid #5A5A5A;
-  background-color: #ffffff;
-  border-radius: 15px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 900px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #222222;
+ border: 2px solid #5A5A5A;
+ background-color: #ffffff;
+ border-radius: 15px;
+ padding: 20px;
+ margin: 20px auto;
+ max-width: 900px;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ color: #222222;
 }
 
 .footer-left,
 .footer-right {
-  display: flex;
-  align-items: center;
+ display: flex;
+ align-items: center;
 }
 
 .footer-left a {
-  margin-right: 15px;
+ margin-right: 15px;
 }
 
 .social-icon {
-  width: 30px;
-  height: 30px;
+ width: 30px;
+ height: 30px;
 }
 
 .footer-right {
-  flex-direction: column;
-  align-items: flex-end;
+ flex-direction: column;
+ align-items: flex-end;
 }
 
 .footer-right p {
-  margin: 2px 0;
+ margin: 2px 0;
 }
 
 .info-contacto,
 .info-centro {
-  display: flex;
-  gap: 30px;
-  justify-content: space-between;
-  margin: 20px auto;
-  max-width: 900px;
+ display: flex;
+ gap: 30px;
+ justify-content: space-between;
+ margin: 20px auto;
+ max-width: 900px;
 }
 
 .info-contacto > div,
 .info-centro > div {
-  flex: 1;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 15px;
-  border: 2px solid #5A5A5A;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+ flex: 1;
+ background-color: #ffffff;
+ padding: 20px;
+ border-radius: 15px;
+ border: 2px solid #5A5A5A;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
+ width: 100%;
+ border-collapse: collapse;
+ text-align: center;
 }
 
 table th,
 table td {
-  border: 1px solid #5A5A5A;
-  padding: 8px;
+ border: 1px solid #5A5A5A;
+ padding: 8px;
 }
 
 table th {
-  background-color: #F2F2F2;
+ background-color: #F2F2F2;
 }
 
 
 /*EJERCICIO 6.3
 Cuando la pantalla es menor a 700px*/
 @media (max-width: 700px) {
-  body {
-    margin-left: 15px;
-    margin-right: 15px;
-    background-image: url(images/gimnasio-peque.jpg);
-    background-size: 100% 100%;
-  /*background-size: cover;
-  background-size: contain;*/
+ body {
+ margin-left: 15px;
+ margin-right: 15px;
+ background-image: url(images/gimnasio-peque.jpg);
+ background-size: 100% 100%;
+ /*background-size: cover;
+  background-size: contain;*/
 
-  }
+ }
 
-  .actividades > div {
-    flex: 0   1 100%;
-    max-width: 100%;
-  }
+ .actividades > div {
+  flex: 0  1 100%;
+  max-width: 100%;
+ }
 
-  .actividades img {
-    max-width: 100%;
-    height: auto;
-  }
+ .actividades img {
+  max-width: 100%;
+  height: auto;
+ }
 
-  .footer-right {
-    align-items: flex-start;
-  }
+ .footer-right {
+   align-items: flex-start;
+ }
 
-  .navbar {
-    flex-wrap: wrap;
-  }
+ .navbar {
+  flex-wrap: wrap;
+ }
 
-  .navbar .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #ffffff;
-    border-top: 1px solid #ccc;
-  }
+ .navbar .menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #ccc;
+ }
 
-  .navbar .menu.active {
-    display: flex;
-    animation: slideDown 0.3s ease;
-  }
+ .navbar .menu.active {
+  display: flex;
+  animation: slideDown 0.3s ease;
+ }
 
-  .navbar .menu a {
-    padding: 10px 0;
-    text-align: center;
-    border-bottom: 1px solid #eee;
-    margin-left: 0;
-  }
+ .navbar .menu a {
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  margin-left: 0;
+ }
 
-  .navbar .icon {
-    display: block;
-  }
+ .navbar .icon {
+  display: block;
+ }
 }
 
 /*EJERCICIO 6.3 
 Menor a 480px*/
 @media (max-width: 480px) {
-  body {
-    margin-left: 15px;
-    margin-right: 15px;
-    background-image: url(images/cinta_peque.png);
-    background-size: 100% 100%;
+ body {
+  margin-left: 15px;
+  margin-right: 15px;
+  background-image: url(images/cinta_peque.png);
+  background-size: 100% 100%;
   /*background-size: cover;
-  background-size: contain;*/
+    background-size: contain;*/
+ }
 
-  }
+ .navbar .logo img {
+  width: 80px;
+ }
 
-  .navbar .logo img {
-    width: 80px;
-  }
+ h1 {
+  font-size: 22px;
+  text-align: center;
+ }
 
-  h1 {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  p.center {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  
+ p.center {
+ font-size: 14px;
+ text-align: center;
+ } 
 }
 
 @keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+ from {
+ opacity: 0;
+  transform: translateY(-10px);
+ }
+ to {
+ opacity: 1;
+ transform: translateY(0);
+ }
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
 }
 
 form input,
 form textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-family: inherit;
+ width: 100%;
+ padding: 8px;
+ border: 1px solid #ccc;
+ border-radius: 8px;
+ font-family: inherit;
 }
 
 form button {
-  margin-top: 10px;
-  background-color: #0057B7;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 10px;
-  cursor: pointer;
-  font-weight: bold;
+ margin-top: 10px;
+ background-color: #0057B7;
+ color: #fff;
+ border: none;
+ border-radius: 8px;
+ padding: 10px;
+ cursor: pointer;
+ font-weight: bold;
 }
 
 form button:hover {
-  background-color: #00A676;
+ background-color: #00A676;
 }
 
 .mapa iframe {
-  width: 100%;
-  height: 250px;
+ width: 100%;
+ height: 250px;
 }
 
 @media (max-width: 700px) {
-  .info-contacto, .info-centro {
-    flex-direction: column;
-    gap: 20px;
-  }
+ .info-contacto, .info-centro {
+   flex-direction: column;
+ gap: 20px;
+ }
 }
 
 .info-contacto {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: flex-start; 
+ display: flex;
+ gap: 20px;
+ justify-content: center;
+ align-items: flex-start; 
 }
 
 /*EJERCICIO 6.1*/
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
+ max-width: 100%;
+ height: auto;
+ display: block;
+ border-radius: 12px;
 }
 
 /*EJERCICIO 6.4
@@ -379,3 +413,27 @@ img {
 4.Si, bueno, mantienen la calidad que ya tenian, excepto la de background que cambia a otra
 de menos calidad.
 */
+
+/* ESTILOS APLICADOS AL BOTÓN DE ACTIVIDADES */
+main button {
+ display: block; /* Para que ocupe su propia línea y se pueda centrar */
+ margin: 20px auto; /* Centrar el botón */
+ background-color: #0057B7; /* Azul */
+ color: white;
+ border: none;
+ border-radius: 8px;
+ padding: 10px 20px;
+ cursor: pointer;
+ font-size: 18px;
+ font-weight: bold;
+ transition: background-color 0.3s;
+}
+
+main button a {
+ color: white; /* Asegurar que el texto del enlace sea blanco */
+ text-decoration: none; /* Eliminar el subrayado del enlace */
+}
+
+main button:hover {
+ background-color: #00A676; /* Verde al pasar el ratón */
+}

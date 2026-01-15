@@ -14,72 +14,77 @@
         <img src="images/logo-musica3.png" alt="Logo página">
       </div>
       <div class="menu" id="menu">
-        <a href="index.html">Inicio</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="actividades.html">Actividades</a>
+        <a id="idi-inicio" href="index.html">Inicio</a>
+        <a id="idi-contacto" href="contacto.html">Contacto</a>
+        <a id="idi-actividades" href="actividades.html">Actividades</a>
       </div>
       <a href="javascript:void(0);" class="icon" id="menu-icon">
         <i class="fa fa-bars"></i>
       </a>
     </nav>
 
-    <h1 class="center">SergioSport</h1>
-    <p class="center">Si quieres empezar bien, contacta conmigo</p>
+    <h1 class="center" id="idi-logo">SergioSport</h1>
+    <p class="center" id="idi-eslogan">Si quieres empezar bien, contacta conmigo</p>
+    <div id="selector-idiomas" class="center">
+      <button data-lang="ca">CA</button>
+      <button data-lang="es">ES</button>
+      <button data-lang="en">EN</button>
+    </div>
   </header>
 
   <main>
     <!-- Sección de contacto -->
     <div class="info-contacto"> 
       <div class="cont-usuario">
-        <h2>Contacto</h2>
+        <h2 id="idi-contacto-titulo">Contacto</h2>
         <form>
-          <label for="nombre">Nombre completo:</label><br>
+          <label for="nombre" id="idi-nombre">Nombre completo:</label><br>
           <input type="text" id="nombre" name="nombre"><br>
 
-          <label for="correo">Correo electrónico:</label><br>
+          <label for="correo" id="idi-correo">Correo electrónico:</label><br>
           <input type="email" id="correo" name="correo"><br>
 
-          <label for="telefono">Número de teléfono:</label><br>
+          <label for="telefono" id="idi-telefono">Número de teléfono:</label><br>
           <input type="tel" id="telefono" name="telefono"><br>
 
-          <label for="asunto">Asunto:</label><br>
+          <label for="asunto" id="idi-asunto">Asunto:</label><br>
           <input type="text" id="asunto" name="asunto"><br>
 
-          <label for="mensaje">Mensaje:</label><br>
+          <label for="mensaje" id="idi-mensaje">Mensaje:</label><br>
           <textarea id="mensaje" name="mensaje" rows="4"></textarea><br>
 
-          <button type="submit">Enviar</button>
+          <button type="submit" id="idi-enviar">Enviar</button>
         </form>
       </div>
 
       <div class="cont-pag">
-        <h2>Para contactar</h2>
-        <p><b>Correo:</b> Sergio.v.m2002@alumnes.ilerna.com</p>
-        <p><b>Teléfono:</b> 68490172839</p>
-        <p><b>Centro:</b> Lostark, calle Rafael Vinagrillo 24</p>
+        <h2 id="idi-contacto-info">Para contactar</h2>
+        <p class="idi-contacto-detalle"><b>Correo:</b> Sergio.v.m2002@alumnes.ilerna.com</p>
+        <p class="idi-contacto-detalle"><b>Teléfono:</b> 68490172839</p>
+        <p class="idi-contacto-detalle"><b>Centro:</b> Lostark, calle Rafael Vinagrillo 24</p>
       </div>
     </div>
 
     <!-- Sección de información del centro -->
     <div class="info-centro">
       <div class="horario">
-        <h2>Horario de atención</h2>
+        <h2 id="idi-horario-centro">Horario de atención</h2>
         <table>
           <thead>
             <tr>
-              <th>Día</th>
-              <th>Horario</th>
+              <th id="idi-dia">Día</th>
+              <th id="idi-horario">Horario</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Lunes a Viernes</td><td>08:00 – 22:00</td></tr>
-            <tr><td>Sábado y Domingo</td><td>10:00 – 20:00</td></tr>
+            <tr><td id="idi-lunes-viernes">Lunes a Viernes</td><td>08:00 – 22:00</td></tr>
+            <tr><td id="idi-sab-dom">Sábado y Domingo</td><td>10:00 – 20:00</td></tr>
           </tbody>
         </table>
       </div>
 
       <div class="mapa">
-        <h2>Visítanos</h2>
+        <h2 id="idi-visitanos">Visítanos</h2>
         <iframe
           src="https://www.google.com/maps?q=Sabadell,+España&output=embed"
           width="100%"
@@ -109,6 +114,6 @@
     </div>
   </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

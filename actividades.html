@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Contacto | SergioSport</title>
+  <title>SergioSport</title>
 </head>
 <body>
   <header>
@@ -14,9 +14,9 @@
         <img src="images/logo-musica3.png" alt="Logo página">
       </div>
       <div class="menu" id="menu">
-        <a href="index.html">Inicio</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="actividades.html">Actividades</a>
+        <a id="idi-inicio" href="index.html">Inicio</a>
+        <a id="idi-contacto" href="contacto.html">Contacto</a>
+        <a id="idi-actividades" href="actividades.html">Actividades</a>
       </div>
       <a href="javascript:void(0);" class="icon" id="menu-icon">
         <i class="fa fa-bars"></i>
@@ -24,22 +24,28 @@
     </nav>
 
     <h1 class="center">SergioSport</h1>
-    <p class="center">Si quieres empezar bien, contacta conmigo</p>
+    <p id="idi-eslogan" class="center">Si quieres empezar bien, contacta conmigo</p> 
+    <div id="selector-idiomas" class="center">
+      <button data-lang="ca">CA</button>
+      <button data-lang="es">ES</button>
+      <button data-lang="en">EN</button>
+    </div>
   </header>
 
+
   <main>
-    <h2>Horario de Actividades Grupales</h2>
+    <h2 id="idi-horario-actividades">Horario de Actividades Grupales</h2>
 
 <table class="tabla-horarios">
   <thead>
     <tr>
-      <th>Horario</th>
-      <th>Lunes</th>
-      <th>Martes</th>
-      <th>Miércoles</th>
-      <th>Jueves</th>
-      <th>Viernes</th>
-      <th>Sábado</th>
+      <th id="idi-hora">Horario</th>
+      <th id="idi-lunes">Lunes</th>
+      <th id="idi-martes">Martes</th>
+      <th id="idi-miercoles">Miércoles</th>
+      <th id="idi-jueves">Jueves</th>
+      <th id="idi-viernes">Viernes</th>
+      <th id="idi-sabado">Sábado</th>
     </tr>
   </thead>
   <tbody>
@@ -110,17 +116,17 @@
 </table>
 
 <div class="leyenda">
-  <h3>Leyenda de Actividades:</h3>
+  <h3 id="idi-leyenda">Leyenda de Actividades:</h3>
   <ul>
-    <li><span class="color-cardiovascular"></span> Cardiovascular - Circuito de entrenamiento cardiovascular</li>
-    <li><span class="color-fuerza"></span> Fuerza - Circuito de entrenamiento de fuerza</li>
-    <li><span class="color-abdomen"></span> Abdomen y Glúteo - Entrenamiento centrado en abdomen y glúteo</li>
-    <li><span class="color-trx"></span> TRX - Entrenamiento con material TRX</li>
-    <li><span class="color-estiramientos"></span> Estiramientos - Sesión de estiramientos y relajación</li>
-    <li><span class="color-pilates"></span> Pilates - Sesión de pilates</li>
+    <li><span class="color-cardiovascular"></span> <p class="cardiovascular2">Cardiovascular - Circuito de entrenamiento cardiovascular</p></li>
+    <li><span class="color-fuerza"></span> <p class="fuerza2"> Fuerza - Circuito de entrenamiento de fuerza</p></li>
+    <li><span class="color-abdomen"></span> <p class="abdomen2"> Abdomen y Glúteo - Entrenamiento centrado en abdomen y glúteo</p></li>
+    <li><span class="color-trx"></span> <p class="trx2"> TRX - Entrenamiento con material TRX</p></li>
+    <li><span class="color-estiramientos"></span> <p class="estiramientos2"> Estiramientos - Sesión de estiramientos y relajación</p></li>
+    <li><span class="color-pilates"></span> <p class="pilates2"> Pilates - Sesión de pilates</p></li>
   </ul>
-  <p><strong>Nota:</strong> Todas las actividades tienen una duración de 30 minutos con un máximo de 10 personas por sesión.</p>
-  <p><strong>Entrenamiento Personal y Pádel:</strong> Disponibles bajo reserva. Contacta con recepción para más información.</p>
+  <p id="idi-nota"><strong>Nota:</strong> Todas las actividades tienen una duración de 30 minutos con un máximo de 10 personas por sesión.</p>
+  <p id="idi-personal-pad"><strong>Entrenamiento Personal y Pádel:</strong> Disponibles bajo reserva. Contacta con recepción para más información.</p>
 </div>
 
 <style>

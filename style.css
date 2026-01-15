@@ -121,6 +121,12 @@ h2 {
  justify-content: center;
 }
 
+.audio-container {
+  color: #0057B7;
+  font-family: awesome;
+  text-align: center;
+}
+
 .actividades {
  display: flex;
  flex-wrap: wrap;

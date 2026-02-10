@@ -48,10 +48,30 @@ header {
  margin: 0 auto 20px auto;
 }
 
+/*Logo del header para animar*/
 .navbar .logo img {
  width: 100px;
  height: auto;
  display: block;
+ animation: logoEntrada 1.5s ease-out;
+ animation-iteration-count: 1;
+ animation-fill-mode: forwards;
+}
+
+
+@keyframes logoEntrada {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .navbar .menu a {
@@ -62,8 +82,14 @@ header {
  transition: color 0.3s;
 }
 
+/*Transición y efecto hover en el navegador*/
 .navbar .menu a:hover {
+  transition: 1s;
  color: #00A676;
+}
+
+.navbar .menu :active {
+  color: #00A676
 }
 
 .navbar .icon {
@@ -283,9 +309,12 @@ Cuando la pantalla es menor a 700px*/
   border-top: 1px solid #ccc;
  }
 
+ /*Menu desplegable / hamburguesa*/
  .navbar .menu.active {
   display: flex;
-  animation: slideDown 0.3s ease;
+  animation: slideDown 1s ease;
+  transform: translateY(0px, 50px);
+  opacity: initial;
  }
 
  .navbar .menu a {
@@ -403,11 +432,11 @@ img {
 de menos calidad.
 */
 
-/* ESTILOS APLICADOS AL BOTÓN DE ACTIVIDADES */
+/* ESTILOS  Y ANIMACIÖN APLICADOS AL BOTÓN DE ACTIVIDADES EN INDEX*/
 main button {
- display: block; /* Para que ocupe su propia línea y se pueda centrar */
- margin: 20px auto; /* Centrar el botón */
- background-color: #0057B7; /* Azul */
+ display: block; 
+ margin: 20px auto; 
+ background-color: #0057B7; 
  color: white;
  border: none;
  border-radius: 8px;
@@ -419,10 +448,10 @@ main button {
 }
 
 main button a {
- color: white; /* Asegurar que el texto del enlace sea blanco */
- text-decoration: none; /* Eliminar el subrayado del enlace */
+ color: white; 
+ text-decoration: none; 
 }
 
 main button:hover {
- background-color: #00A676; /* Verde al pasar el ratón */
+ background-color: #00A676; 
 }

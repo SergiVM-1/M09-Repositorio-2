@@ -5,9 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo-musica3.png">
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  
   <title>SergioSport</title>
 </head>
 <body>
@@ -28,26 +35,24 @@
 
     <h1 class="center">SergioSport</h1>
     <p id="idi-eslogan" class="center">Si quieres empezar bien, contacta conmigo</p> 
-    <div id="selector-idiomas" class="center">
-      <button data-lang="ca">CA</button>
-      <button data-lang="es">ES</button>
-      <button data-lang="en">EN</button>
+    
+    <div id="selector-idiomas" class="center" style="margin-top: 10px; display: flex; justify-content: center;">
+      <button class="boton-idioma" data-lang="ca">CA</button>
+      <button class="boton-idioma" data-lang="es">ES</button>
+      <button class="boton-idioma" data-lang="en">EN</button>
     </div>
   </header>
 
   <main>
-      <audio autoplay>
-        <source src="audio/BasePágina.mp3" type="audio/mpeg">
-        <source src="audio/BasePáginaOGG.ogg" type="audio/ogg">
-      </audio>
+    <audio autoplay>
+      <source src="audio/BasePágina.mp3" type="audio/mpeg">
+      <source src="audio/BasePáginaOGG.ogg" type="audio/ogg">
+    </audio>
    
     <h2 id="idi-visita">Visita guiada por el centro</h2>
 
     <section class="panel_visita">
-      <video class="video_fondo"
-            controls
-            poster="images/gym-funcional.webp"
-            preload="metadata">
+      <video class="video_fondo" controls poster="images/gym-funcional.webp" preload="metadata">
         <source src="video/Videogym.mp4" type="video/mp4">
         <source src="video/Videogym.webm" type="video/webm">
         Tu navegador no soporta videos HTML5.
@@ -55,12 +60,10 @@
     </section>
 
     <h2 id="idi-ofertas">¿Has visto todo lo que ofrece el centro?</h2>
+    
     <section class="actividades">
-
       <div class="actividad">
-        <div class="Izq">
-          <img src="images/quema-grasa.jpg" alt="Quema Grasas">
-        </div>
+        <div class="Izq"><img src="images/quema-grasa.jpg" alt="Quema Grasas"></div>
         <div class="Der">
           <p id="idi-act-quemaGrasa">Circuito de entrenamiento cardiovascular</p>
           <p class="idi-genteTotal">⏱️ 30m · 👥 Hasta 10 personas</p>
@@ -68,9 +71,7 @@
       </div>
 
       <div class="actividad">
-        <div class="Izq">
-          <img src="images/fuerza.jpg" alt="Fuerza">
-        </div>
+        <div class="Izq"><img src="images/fuerza.jpg" alt="Fuerza"></div>
         <div class="Der">
           <p id="idi-act-fuerza">Circuito de entrenamiento de fuerza</p>
           <p class="idi-genteTotal">⏱️ 30m · 👥 Hasta 10 personas</p>
@@ -78,9 +79,7 @@
       </div>
 
       <div class="actividad">
-        <div class="Izq">
-          <img src="images/abdomen-y-gluteo.jpg" alt="Abdomen y Glúteo">
-        </div>
+        <div class="Izq"><img src="images/abdomen-y-gluteo.jpg" alt="Abdomen y Glúteo"></div>
         <div class="Der">
           <p id="idi-act-gap">Circuito de entrenamiento centrado en abdomen y glúteo</p>
           <p class="idi-genteTotal">⏱️ 30m · 👥 Hasta 10 personas</p>
@@ -88,9 +87,7 @@
       </div>
 
       <div class="actividad">
-        <div class="Izq">
-          <img src="images/trx.jpeg" alt="TRX">
-        </div>
+        <div class="Izq"><img src="images/trx.jpeg" alt="TRX"></div>
         <div class="Der">
           <p id="idi-act-trx">Circuito de entrenamiento con material TRX</p>
           <p class="idi-genteTotal">⏱️ 30m · 👥 Hasta 10 personas</p>
@@ -98,9 +95,7 @@
       </div>
 
       <div class="actividad">
-        <div class="Izq">
-          <img src="images/estiramientos.jpg" alt="Estiramientos">
-        </div>
+        <div class="Izq"><img src="images/estiramientos.jpg" alt="Estiramientos"></div>
         <div class="Der">
           <p id="idi-act-estiramientos">Sesión de estiramientos y relajación</p>
           <p class="idi-genteTotal">⏱️ 30m · 👥 Hasta 10 personas</p>
@@ -108,9 +103,7 @@
       </div>
 
       <div class="actividad">
-        <div class="Izq">
-          <img src="images/pilates.jpg" alt="Pilates">
-        </div>
+        <div class="Izq"><img src="images/pilates.jpg" alt="Pilates"></div>
         <div class="Der">
           <p id="idi-act-pilates">Sesión de pilates</p>
           <p class="idi-genteTotal">⏱️ 30m · 👥 Hasta 10 personas</p>
@@ -118,9 +111,7 @@
       </div>
 
       <div class="actividad">
-        <div class="Izq">
-          <img src="images/entrenamiento-personal.webp" alt="Entrenamiento personal">
-        </div>
+        <div class="Izq"><img src="images/entrenamiento-personal.webp" alt="Entrenamiento personal"></div>
         <div class="Der">
           <p id="idi-act-personal">Entrenamiento personalizado a tus necesidades</p>
           <p id="idi-genteTotal2">⏱️ 1h · 👤 Individual</p>
@@ -128,31 +119,22 @@
       </div>
 
       <div class="actividad">
-        <div class="Izq">
-          <img src="images/entreno-padel.jpg" alt="Entreno de pádel">
-        </div>
+        <div class="Izq"><img src="images/entreno-padel.jpg" alt="Entreno de pádel"></div>
         <div class="Der">
           <p id="idi-act-padel">Entrenos de pádel a tu cuenta o con un profesional</p>
           <p id="idi-genteTotal3">⏱️ 1h · 👥 De 1 a 2 personas</p>
         </div>
       </div>
-
     </section>
 
-
-    <!--Animación que hace que el botón se haga más grande cuando haces hover-->
     <h2 id="idi-horario">Ver horario de las actividades</h2>
     <button> <a id="idi-horarioBoton" href="actividades.html">Horario Actividades</a></button>
   </main>
 
   <footer>
     <div class="footer-left">
-      <a href="https://www.facebook.com" target="_blank">
-        <img src="images/facebook.PNG" alt="Facebook" class="social-icon">
-      </a>
-      <a href="https://www.twitter.com" target="_blank">
-        <img src="images/x.PNG" alt="Twitter" class="social-icon">
-      </a>
+      <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.PNG" alt="Facebook" class="social-icon"></a>
+      <a href="https://www.twitter.com" target="_blank"><img src="images/x.PNG" alt="Twitter" class="social-icon"></a>
     </div>
     <div class="footer-right">
       <p>Correo: Sergio.v.m2002@alumnes.ilerna.com</p>
@@ -161,6 +143,8 @@
     </div>
   </footer>
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="jquery.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

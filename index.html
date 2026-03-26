@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/interactividad_practica13.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/png" href="images/logo-musica3.png">
-  
+    
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.min.js"></script>
 
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
@@ -42,7 +45,7 @@
       <button class="boton-idioma" data-lang="en">EN</button>
     </div>
   </header>
-
+  <canvas id="bgCanvas"></canvas>
   <main>
     <audio autoplay>
       <source src="audio/BasePágina.mp3" type="audio/mpeg">
@@ -129,6 +132,13 @@
 
     <h2 id="idi-horario">Ver horario de las actividades</h2>
     <button> <a id="idi-horarioBoton" href="actividades.html">Horario Actividades</a></button>
+
+    <!--Práctica 13 Grafico-->
+    <h2>Ocupación media del gimnasio</h2>
+    <div class="chart-container">
+      <canvas id="myChart"></canvas>
+    </div>
+    <button id="toggleChart">Cambiar tipo de gráfico</button>
   </main>
 
   <footer>
@@ -145,6 +155,7 @@
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="jquery.js"></script>
+  <script src="js/interactividad_practica13.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

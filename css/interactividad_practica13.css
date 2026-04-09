@@ -1,0 +1,17 @@
+/*Css para la práctica 13*/
+.chart-container {
+  display: flex;
+  align-items: center;
+  width: 40vw;
+  margin: 0 auto; 
+}
+
+#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none; 
+}

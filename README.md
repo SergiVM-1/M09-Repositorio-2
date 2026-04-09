@@ -6,3 +6,5 @@ El primer H2 ha sido modíficado para cambiar la frase de "Visita guiada por el 
 
 Práctica 11:
 La explicación de cada apartado de esta actividad esta en el propio archivo jquery.js, dónde se encuentra el código que hace funcionar y la explicación de lo que hace este código.
+
+# Práctica 13
